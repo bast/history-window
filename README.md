@@ -27,7 +27,7 @@ source history-window.sh
 
 - There are rough edges. Improvements are welcome.
 - Resizing kind of works, but requires a `clear` to redraw the window.
-- Currently only Bash. Let's add support for fish?
+- Currently only Bash. Let's add support for [fish](https://fishshell.com/)?
 
 
 ## Similar projects
