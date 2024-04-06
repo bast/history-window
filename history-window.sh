@@ -5,7 +5,7 @@ BASH_LOG=~/history.txt
 
 # dimensions
 NUM_HISTORY_LINES=5
-WINDOW_WIDTH=50
+WINDOW_WIDTH=40
 
 # 6 is cyan
 HISTORY_FONT_COLOR=6
