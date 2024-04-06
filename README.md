@@ -4,6 +4,11 @@ Show command history "picture-in-picture" when teaching command line.
 **Requires Bash.**
 
 
+## Demo
+
+![demo](demo.gif)
+
+
 ## Installation
 
 ```bash
