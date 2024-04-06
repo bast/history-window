@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # where is history written to?
-BASH_LOG=~/history.txt
+HISTORY_FILE=~/history.txt
 
 # dimensions
 NUM_HISTORY_LINES=5
@@ -54,7 +54,7 @@ show_history_block() {
     for (( i = 1; i <= NUM_HISTORY_LINES; i++ )); do
         local depth=$((NUM_HISTORY_LINES + 1 - i))
         local line
-        line=$(tail -n ${depth} ${BASH_LOG} | head -n 1)
+        line=$(tail -n ${depth} ${HISTORY_FILE} | head -n 1)
         print_line $i ${col} "|" " ${line}" "|"
     done
 
@@ -75,8 +75,17 @@ bash_log_commands () {
     [[ "$PROMPT_COMMAND" =~ "$BASH_COMMAND" ]] && return # don't cause a preexec for $PROMPT_COMMAND
     local this_command
     this_command=$(HISTTIMEFORMAT='' history 1 | sed -e "s/^[ ]*[0-9]*[ ]*//");
-    echo "$this_command" >> "$BASH_LOG"
+    echo "$this_command" >> "$HISTORY_FILE"
 }
+
+# if history file does not exist, create it
+# and write a couple of empty lines to it
+if [ ! -f "$HISTORY_FILE" ]; then
+    touch "$HISTORY_FILE"
+    for (( i = 1; i <= NUM_HISTORY_LINES; i++ )); do
+        echo "" >> "$HISTORY_FILE"
+    done
+fi
 
 trap 'bash_log_commands' DEBUG
 
