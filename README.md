@@ -7,6 +7,6 @@ Show command history "picture-in-picture" when teaching command line.
 ## Installation
 
 ```bash
-$ wget https://raw.githubusercontent.com/bast/history-window/main/history-window.sh
-$ source history-window.sh
+wget https://raw.githubusercontent.com/bast/history-window/main/history-window.sh
+source history-window.sh
 ```
