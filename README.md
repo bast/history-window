@@ -14,4 +14,5 @@ source history-window.sh
 
 ## Status and roadmap
 
-There are rough edges. Improvements are welcome.
+- There are rough edges. Improvements are welcome.
+- Resizing kind of works, but requires a `clear` to redraw the window.
