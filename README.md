@@ -10,3 +10,8 @@ Show command history "picture-in-picture" when teaching command line.
 wget https://raw.githubusercontent.com/bast/history-window/main/history-window.sh
 source history-window.sh
 ```
+
+
+## Status and roadmap
+
+There are rough edges. Improvements are welcome.
