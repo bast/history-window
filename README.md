@@ -22,6 +22,12 @@ wget https://raw.githubusercontent.com/bast/history-window/main/history-window.s
 source history-window.sh
 ```
 
+The nice thing is that it does not install or modify anything permanently. Once
+you close the terminal, it's gone.
+Only thing left behind might be:
+- `history-window.sh` which we downloaded
+- `~/history.txt` which is the history file written to by the script
+
 
 ## Status and roadmap
 
